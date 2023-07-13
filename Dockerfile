@@ -1,18 +1,18 @@
 FROM python:3.9
 
 # File Author / Maintainer
-MAINTAINER Sagar
+LABEL maintainer="Sagar"
 
 # Copy the requirements file
-COPY ./app/requirements.txt /var/www/app/app/requirements.txt
+COPY ./app/requirements.txt /var/www/app/requirements.txt
 
-
+RUN pip install --upgrade pip
 # Install the required packages
 #RUN pip3 install -r /var/www/app/app/requirements.txt
-RUN pip3 install --no-cache-dir -r /var/www/app/app/requirements.txt gunicorn
+RUN pip3 install --no-cache-dir -r /var/www/app/requirements.txt gunicorn
 
 # Copy the application code
-COPY ./app /var/www/app/app/
+COPY ./app /var/www/app
 
 # Set the working directory inside the container
 WORKDIR /var/www/app

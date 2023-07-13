@@ -25,4 +25,4 @@ EXPOSE 3000
 EXPOSE 8082
 
 # Start the Flask application
-CMD ["python", "app.py"]
+CMD ["python", "app/app.py"]

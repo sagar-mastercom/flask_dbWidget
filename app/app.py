@@ -2,7 +2,6 @@ from flask import Flask, render_template,request
 from flask_smorest import Blueprint
 from flask_cors import CORS
 
-# from app.routes import databases_bp
 from routes import databases_bp
 
 #resolve to the application path

@@ -5,7 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '8081:80'
+      - '8000:80'
+      - '8081:8000'
       - '8081:443'
     volumes:
       - './certs:/certs'

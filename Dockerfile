@@ -8,7 +8,8 @@ COPY ./app/requirements.txt /var/www/app/app/requirements.txt
 
 
 # Install the required packages
-RUN pip3 install -r /var/www/app/app/requirements.txt
+#RUN pip3 install -r /var/www/app/app/requirements.txt
+RUN pip3 install --no-cache-dir -r /var/www/app/app/requirements.txt gunicorn
 
 # Copy the application code
 COPY ./app /var/www/app/app/

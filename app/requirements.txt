@@ -4,3 +4,4 @@ mysql==0.0.3
 mysql-connector-python==8.0.32
 Flask-Cors==3.0.10
 pyOpenSSL==23.1.1
+gunicorn==20.1.0

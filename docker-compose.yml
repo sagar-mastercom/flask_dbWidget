@@ -5,8 +5,12 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '8000:80'
-      - '8082:8000'
-      - '5000:443'
+      - '5000:80'
+      - '8082:5000'
+      - '3000:443'
+    environment:
+      - FLASK_ENV=production
+      - FLASK_APP=app.py
     volumes:
       - './certs:/certs'
+    command: flask run --host=0.0.0.0 --cert=/certs/server.crt --key=/certs/server.key

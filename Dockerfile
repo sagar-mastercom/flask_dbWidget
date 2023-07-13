@@ -20,6 +20,9 @@ WORKDIR /var/www/app
 # Expose port 80 and 443
 EXPOSE 80
 EXPOSE 443
+EXPOSE 5000
+EXPOSE 3000
+EXPOSE 8082
 
 # Start the Flask application
-CMD ["gunicorn", "--bind", "0.0.0.0:80", "--keyfile", "/certs/server.key", "--certfile", "/certs/server.crt", "app:app"]
+CMD ["python", "app.py"]

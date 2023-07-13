@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  
+  flask-wsgi:
+    restart: always
+    image: mysqlflask2
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:80"

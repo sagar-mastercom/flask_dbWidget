@@ -1,0 +1,6 @@
+Flask==2.2.2
+flask-smorest==0.41.0
+mysql==0.0.3
+mysql-connector-python==8.0.32
+Flask-Cors==3.0.10
+pyOpenSSL==23.1.1

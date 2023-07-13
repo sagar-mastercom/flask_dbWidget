@@ -1,11 +1,11 @@
-version: '2'
-
+version: '3'
 services:
-  
-  flask-wsgi:
-    restart: always
-    image: mysqlflask2
-    volumes:
-      - ./app:/app
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "8000:80"
+      - '80:80'
+      - '443:443'
+    volumes:
+      - './certs:/certs'

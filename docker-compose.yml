@@ -10,7 +10,7 @@ services:
       - '3000:443'
     environment:
       - FLASK_ENV=production
-      - FLASK_APP=app.py
+      - FLASK_APP=./app.py
     volumes:
       - './certs:/certs'
     command: flask run --host=0.0.0.0 --cert=/certs/server.crt --key=/certs/server.key

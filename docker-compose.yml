@@ -13,4 +13,4 @@ services:
       - FLASK_APP=app/app.py
     volumes:
       - './certs:/certs'
-    command: flask run --host=0.0.0.0 --cert=/certs/server.crt --key=/certs/server.key
+    command: flask run --host=0.0.0.0 --cert=/certs/server.crt --key=/certs/server.key app:app

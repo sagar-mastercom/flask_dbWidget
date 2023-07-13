@@ -22,4 +22,4 @@ EXPOSE 80
 EXPOSE 443
 
 # Start the Flask application
-CMD ["gunicorn", "--bind", "0.0.0.0:80", "--keyfile", "/certs/server.key", "--certfile", "/certs/server.cert", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:80", "--keyfile", "/certs/server.key", "--certfile", "/certs/server.crt", "app:app"]

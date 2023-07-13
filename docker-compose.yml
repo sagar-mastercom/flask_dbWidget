@@ -7,6 +7,6 @@ services:
     ports:
       - '8000:80'
       - '8082:8000'
-      - '8082:443'
+      - '5000:443'
     volumes:
       - './certs:/certs'

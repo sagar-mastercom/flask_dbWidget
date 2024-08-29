@@ -12,7 +12,7 @@ CORS(app)
 #creating the routes
 app.register_blueprint(databases_bp)
 
-
+#Route added from git
 @app.route("/")
 def home():
     return "/home"
